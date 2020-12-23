@@ -1,63 +1,94 @@
 <template>
   <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">portfolio-with-nuxtjs</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+    <aside class="aside">
+      <SideBar></SideBar>
+    </aside>
+    <main class="main">
+      <MainContent></MainContent>
+    </main>
   </div>
 </template>
 
 <script>
-export default {}
+import SideBar from "@/components/SideBar";
+import MainContent from "@/components/MainContent";
+export default {
+  components: {
+    SideBar,
+    MainContent,
+  },
+  head() {
+    return {
+      title: "Portfolio - TuongLe",
+      meta: [
+        {
+          hid: "Portfolio",
+          name: "Portfolio",
+          content: "Portfolio with dark theme",
+        },
+      ],
+    };
+  },
+};
 </script>
 
-<style>
+<style lang="scss">
 .container {
-  margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  overflow: hidden;
+  background: $primary-color-background;
+  color: $primary-color-light;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.aside {
+  height: 100%;
+  flex: 0 0 35rem;
+  padding: $gutter 2rem;
+  align-self: flex-start;
+  color: $secondary-color;
+  box-shadow: $box-shadow;
+  background-image: $secondary-color-background;
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.main {
+  width: 100%;
+  padding: $gutter;
+  overflow: auto;
 }
-
-.links {
-  padding-top: 15px;
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px $primary-color;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color-dark;
+  border-radius: 10px;
+}
+@media only screen and (max-width: $screen-medium) {
+  .container {
+    height: auto;
+    flex-direction: column;
+    overflow: visible;
+  }
+  .aside {
+    width: 100%;
+    padding: 3rem $gutter;
+  }
+  .main {
+    background: inherit;
+    overflow: visible;
+  }
+}
+@media only screen and (max-width: $screen-small) {
+  .main {
+    padding: $small-gutter;
+  }
+  .aside {
+    padding: $small-gutter;
+  }
 }
 </style>
