@@ -1,4 +1,5 @@
 export default {
+  target: "static",
   server: {
     host: "0.0.0.0",
     // hostname: "192.168.0.107",

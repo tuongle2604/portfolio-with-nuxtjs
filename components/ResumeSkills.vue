@@ -19,7 +19,7 @@ export default {
         "Familiar with webpack and its technologies such as bundle, split, HMR, tree shaking, ...",
         "Knowledgeable about web technologies such as SPA, PWA, SSR, Lazy loading, SEO, and optimize performance",
         "Knowledgeable about networking and web security",
-        "Knowledgeable about linux, nginx and auto deployment with github",
+        "Knowledgeable about linux, nginx and auto deployment with Github",
       ],
     };
   },

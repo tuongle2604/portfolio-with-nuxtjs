@@ -88,7 +88,7 @@ export default {
           },
           website: {
             link: "https://tuongle.xyz/2048/",
-            text: "https://tuongle.xyz/2048",
+            text: "https://tuongle.xyz/2048/",
             icon: ["fas", "globe"],
           },
           github: {
@@ -100,7 +100,7 @@ export default {
         {
           name: "Realworld vuejs",
           descriptions:
-            "It's a realworld blogging, used for learning new framework or programing language instead of todo project.",
+            "It is a social blogging site, used for learning core concepts & ideology of a new framework or programing language instead of todo project.",
           technologies: ["Vuejs", "Html", "Css"],
           image: {
             src: "/realworld-vuejs-small.jpg",
@@ -111,7 +111,7 @@ export default {
           },
           website: {
             link: "https://tuongle.xyz/realworld/",
-            text: "https://tuongle.xyz/realworld",
+            text: "https://tuongle.xyz/realworld/",
             icon: ["fas", "globe"],
           },
           github: {
