@@ -35,7 +35,7 @@ export default {
             "Built front end web application base on design",
             "Read and analyze user story",
             "Intergration API with BE team",
-            "Unit test & UAT with QC team",
+            "UAT with QC team",
           ],
           technologies: "Vuejs, Vuex, Vue custom element",
         },
